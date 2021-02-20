@@ -2,7 +2,46 @@
 
 
 {% block content %}
-login
-    
-{% endblock content %}
-    
+
+
+{% if error %}
+
+{{ error }}
+<br>
+{% endif %}
+
+<h1>Log In</h1>
+
+{% if error %}
+
+{{ error }}
+<br>
+{% endif %}
+
+<form method="POST" action="{% url 'login' %}">
+
+    {% csrf_token %}
+
+    <form>
+        User Name 
+        <br>
+        <input type="text" name="username">
+<br>
+            Password:
+            <br>
+            <input type="password" name="password">
+
+<br>
+<br>
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+    </form>
+
+</form>
+
+
+
+{% endblock %}
