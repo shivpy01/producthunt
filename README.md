@@ -1,7 +1,7 @@
 # producthunt
 
 
-..* product hunt clone in django 2.2.0 <br>
+* product hunt clone in django 2.2.0 <br>
 front designed using bootstrap 4 <br>
 javascript to eliminate browser dependencies <br>
 
